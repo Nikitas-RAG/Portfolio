@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikitas Marmarinos - Systems Architect</title>
+    <style>
+        /* Advanced CSS Physics & Neumorphism */
+        :root {
+            --bg-color: #2b2b36;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0b0;
+            --accent: #4ca1af;
+            --shadow-light: rgba(255, 255, 255, 0.05);
+            --shadow-dark: rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem;
+            width: 100vw;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--bg-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 10px 10px 20px var(--shadow-dark), 
+                       -10px -10px 20px var(--shadow-light);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .inset-box {
+            background: var(--bg-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            box-shadow: inset 6px 6px 12px var(--shadow-dark), 
+                        inset -6px -6px 12px var(--shadow-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            text-shadow: 0px 0px 10px rgba(76, 161, 175, 0.3);
+            margin-bottom: 0.25rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        /* Contact Information Flexbox & Interactive Links */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        .contact-info span, 
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.02);
+            box-shadow: inset 2px 2px 5px var(--shadow-dark), 
+                        inset -2px -2px 5px var(--shadow-light);
+            text-decoration: none; /* Removes default hyperlink underline */
+            color: inherit; /* Inherits text color instead of browser default blue */
+            transition: all 0.3s ease;
+        }
+
+        /* Hover state physics for active links */
+        .contact-link:hover {
+            color: var(--accent);
+            box-shadow: inset 4px 4px 8px var(--shadow-dark), 
+                        inset -4px -4px 8px var(--shadow-light);
+            transform: translateY(-1px);
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .date-badge {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+                        inset -3px -3px 6px var(--shadow-light);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            list-style-type: none;
+            margin-top: 1rem;
+        }
+
+        li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        li::before {
+            content: "►";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.8rem;
+            top: 4px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .role-header {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .card { padding: 1.5rem; }
+            h4 { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .contact-info { flex-direction: column; gap: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Section -->
+    <header class="card">
+        <h1>Nikitas Marmarinos</h1>
+        <h2>Systems Architect & Operations Executive</h2>
+        
+        <div class="contact-info">
+            <span>📍 Pefka, Thessaloniki, Greece</span>
+            <a href="mailto:nikitasmarmarinos@gmail.com" class="contact-link">📧 nikitasmarmarinos@gmail.com</a>
+            <a href="tel:+306943672929" class="contact-link">📱 +30 6943672929</a>
+            <a href="https://www.linkedin.com/in/nikitas-marmarinos-37066b23a" target="_blank" rel="noopener noreferrer" class="contact-link">🔗 LinkedIn Profile</a>
+        </div>
+
+        <div class="inset-box">
+            <p><strong>Executive Summary:</strong> Strategic Systems Architect and Operations Executive combining a decade of CEO-level P&L and risk management experience with deep technical expertise in Python automation, Server-to-Server (S2S) pipeline orchestration, and Retrieval-Augmented Generation (RAG) deployment. Proven ability to bypass middleware to build zero-cost data bridges, eliminate high-risk tracking leakage, and enforce strict cryptographic security protocols across enterprise ecosystems.</p>
+        </div>
+    </header>
+
+    <!-- Core Competencies Section -->
+    <section class="card">
+        <h3>Core Competencies</h3>
+        <div class="skills-grid">
+            <div class="inset-box">
+                <h4>Backend & API Engineering</h4>
+                <p>Python (Flask, asyncio, Pandas), REST/GraphQL, Webhook Engineering, S2S Pipelines, Concurrency Management (Atomic Locks).</p>
+            </div>
+            <div class="inset-box">
+                <h4>AI Architecture & RAG</h4>
+                <p>Hugging Face Vector Embeddings, ChromaDB, CUDA Hardware Acceleration, Deterministic Prompt Engineering (XML).</p>
+            </div>
+            <div class="inset-box">
+                <h4>Infrastructure & Security</h4>
+                <p>GCP Service Accounts, OAuth 2.0, .env Cryptographic Barriers, DNS Authentication (SPF, DKIM, DMARC).</p>
+            </div>
+            <div class="inset-box">
+                <h4>Executive Operations</h4>
+                <p>P&L Management, QA Workflows, Strategic ROI Alignment, Asynchronous Operational Transparency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="card">
+        <h3>Professional Experience</h3>
+
+        <article class="inset-box">
+            <div class="role-header">
+                <h4>Mercedes-Benz AG <span class="date-badge">Dec 2024 - Present</span></h4>
+                <p><em>Enterprise Systems Specialist | Remote, UK</em></p>
+            </div>
+            <ul>
+                <li>Managed backend-to-frontend telemetry, CMS data synchronization, and Telematic Unit optimization for the Mercedes-Benz luxury digital ecosystem.</li>
+                <li>Diagnosed complex digital service access errors, vehicle-to-server data communication failures, and backend database mismatches.</li>
+                <li>Ensured back-mid-front end communication integrity and resolved escalated technical issues under strict enterprise SLA metrics.</li>
+            </ul>
+        </article>
+
+        <article class="inset-box">
+            <div class="role-header">
+                <h4>The Panacea Community / Global Happiness Project <span class="date-badge">Jan 2025 - May 2026</span></h4>
+                <p><em>Systems Architect & Data Engineer | Remote, US</em></p>
+            </div>
+            <ul>
+                <li>Engineered a custom, multi-threaded data decontamination pipeline in Python (ThreadPoolExecutor) with 50 concurrent virtual workers to process 92,000+ high-risk records, eliminating third-party SaaS verification costs.</li>
+                <li>Led high-volume subscriber migrations (200k+ records), architecting custom delivery throttling schedules that maintained an elite 0.4% bounce rate across volatile network ecosystems.</li>
+                <li>Designed server-to-server (S2S) tracking protocols to bypass iOS restrictions and ad-blockers, identifying and plugging an estimated $80,000+ in annual tracking attribution leakage.</li>
+                <li>Managed DNS authentication alignment (SPF, DKIM, DMARC) and spam-heuristic suppression to permanently shield primary brand domains from blacklists.</li>
+            </ul>
+        </article>
+
+        <article class="inset-box">
+            <div class="role-header">
+                <h4>Volkswagen Group <span class="date-badge">Nov 2023 - Dec 2024</span></h4>
+                <p><em>Technical Quality Assurance Specialist | Remote, UK</em></p>
+            </div>
+            <ul>
+                <li>Conducted advanced quality assurance, stress-testing, and troubleshooting for complex enterprise systems and digital workflows.</li>
+                <li>Monitored system integrity and validated operational data to ensure strict compliance with global automotive engineering and digital service standards.</li>
+            </ul>
+        </article>
+
+        <article class="inset-box">
+            <div class="role-header">
+                <h4>E.Marmarinos SA <span class="date-badge">Mar 2011 - Oct 2022</span></h4>
+                <p><em>Chief Executive Officer | On-site, Greece</em></p>
+            </div>
+            <ul>
+                <li>Managed comprehensive enterprise operations, P&L responsibilities, and structural workflows for a decade.</li>
+                <li>Designed operational risk management protocols, QA workflows, and enterprise SOPs.</li>
+                <li>Fostered high-performance discipline and data-driven decision-making, laying the executive operational foundation for subsequent technical architecture roles.</li>
+            </ul>
+        </article>
+
+        <article class="inset-box">
+            <div class="role-header">
+                <h4>Applied Digital Designs <span class="date-badge">Jan 2021 - May 2022</span></h4>
+                <p><em>Full-Stack Web & E-Commerce Developer | Hybrid, Greece</em></p>
+            </div>
+            <ul>
+                <li>Architected and deployed high-performance e-commerce platforms, integrating backend database systems with conversion-optimized front-end interfaces.</li>
+                <li>Engineered comprehensive web analytics and tracking metrics to monitor user behavior, attribution, and overall site performance.</li>
+                <li>Enforced strict Web Content Accessibility Guidelines (WCAG) to ensure digital environments were fully accessible and compliant across all devices.</li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- Education Section -->
+    <section class="card">
+        <h3>Education & Certifications</h3>
+        <div class="inset-box">
+            <ul>
+                <li><strong>MBA, Management Information Systems</strong> - Anglia Ruskin University (Jun 2006 - Mar 2008)</li>
+                <li><strong>Master of Arts (MA), International Marketing</strong> - Anglia Ruskin University (Sep 2004 - Feb 2006)</li>
+                <li><strong>Bachelor's Degree, Business Administration and Management</strong> - Anglia Ruskin University (Sep 2000 - Sep 2004)</li>
+                <li><strong>Velo Code Expert</strong> - Wix (Issued Jun 2022)</li>
+                <li><strong>Certified Web Professional (CWP) - Web Accessibility Specialist</strong> - Wix (Issued Apr 2022)</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
