@@ -87,7 +87,7 @@ if st.button("Run Compliance Audit", type="primary"):
                 genai.configure(api_key=api_key)
                 
                 # We initialize without system_instruction to force stable v1 API routing
-                model = genai.GenerativeModel(model_name='gemini-1.5-flash')
+                model = genai.GenerativeModel(model_name='gemini-2.5-flash')
                 
                 # Combine instructions and payload into a single prompt to bypass beta endpoints
                 compiled_prompt = f"INSTRUCTIONS:\n{SYSTEM_PROMPT}\n\nUSER INPUT:\nCHANNEL: {channel}\nPAYLOAD:\n{payload}"
